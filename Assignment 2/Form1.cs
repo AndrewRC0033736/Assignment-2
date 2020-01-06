@@ -51,5 +51,19 @@ namespace Assignment_2
             textBox3.AppendText(Overall_R.ToString() + "\n");
 
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            double R3 = double.Parse(textBox4.Text);
+            double R4 = double.Parse(textBox5.Text);
+            double Overall_R = 1.0 / (1.0 / R3 + 1.0 / R4);
+            textBox6.Text = String.Empty;
+            textBox6.AppendText(Overall_R.ToString() + "\n");
+        }
+
+        private void TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
