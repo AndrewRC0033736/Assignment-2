@@ -31,21 +31,23 @@ namespace Assignment_2
             }
             catch
             {
-                MessageBox.Show( R1 + " is not a number");
+                MessageBox.Show( textBox1.Text + " is not a number");
+                R1 = 0.0;
             }
 
             try
             {
-                R2 = double.Parse(textBox1.Text);
+                R2 = double.Parse(textBox2.Text);
             }
             catch
             {
-                MessageBox.Show( R2 + " is not a number");
+                MessageBox.Show( textBox2.Text + " is not a number");
+                R2 = 0.0;
             }
 
-            R1 = double.Parse(textBox1.Text);
-            R2 = double.Parse(textBox2.Text);
+
             Overall_R = R1 + R2;
+            textBox3.Text = String.Empty;
             textBox3.AppendText(Overall_R.ToString() + "\n");
 
         }
