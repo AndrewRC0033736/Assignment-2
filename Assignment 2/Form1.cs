@@ -31,7 +31,7 @@ namespace Assignment_2
             }
             catch
             {
-                MessageBox.Show( textBox1.Text + " is not a number");
+                MessageBox.Show(textBox1.Text + " is not a number");
                 R1 = 0.0;
             }
 
@@ -41,7 +41,7 @@ namespace Assignment_2
             }
             catch
             {
-                MessageBox.Show( textBox2.Text + " is not a number");
+                MessageBox.Show(textBox2.Text + " is not a number");
                 R2 = 0.0;
             }
 
@@ -117,6 +117,42 @@ namespace Assignment_2
             Overall_R = R5 + R6 + R7;
             textBox10.Text = String.Empty;
             textBox10.AppendText(Overall_R.ToString() + "\n");
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            double R8, R9, R10, Overall_R;
+            try
+            {
+                R8 = double.Parse(textBox11.Text);
+            }
+            catch
+            {
+                MessageBox.Show(textBox11.Text + " is not a number");
+                R8 = 0.0;
+            }
+            try
+            {
+                R9 = double.Parse(textBox12.Text);
+            }
+            catch
+            {
+                MessageBox.Show(textBox12.Text + " is not a number");
+                R9 = 0.0;
+            }
+            try
+            {
+                R10 = double.Parse(textBox13.Text);
+            }
+            catch
+            {
+                MessageBox.Show(textBox13.Text + " is not a number");
+                R10 = 0.0;
+            }
+
+            Overall_R = 1.0 / (1.0 / R8 + 1.0 / R9 + 1.0 / R10);
+            textBox14.Text = String.Empty;
+            textBox14.AppendText(Overall_R.ToString() + "\n");
         }
     }
 }
