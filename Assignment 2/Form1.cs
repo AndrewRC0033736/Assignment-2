@@ -24,7 +24,9 @@ namespace Assignment_2
 
         private void Button1_Click(object sender, EventArgs e)
         {
+// This double allows the code to read all of the names of components in the circuit
             double R1, R2, Overall_R;
+// This Try-Catch prevents errors by showing a message when a value that isn't a number is entered
             try
             {
                 R1 = double.Parse(textBox1.Text);
@@ -45,7 +47,7 @@ namespace Assignment_2
                 R2 = 0.0;
             }
 
-
+// This tells the code how to add together the values to find the total resistance of the circuit
             Overall_R = R1 + R2;
             textBox3.Text = String.Empty;
             textBox3.AppendText(Overall_R.ToString() + "\n");
@@ -74,6 +76,7 @@ namespace Assignment_2
                 R4 = 0.0;
             }
 
+// This tells the code how to use the values to work out total resistance in parallel
             Overall_R = 1.0 / (1.0 / R3 + 1.0 / R4);
             textBox6.Text = String.Empty;
             textBox6.AppendText(Overall_R.ToString() + "\n");
